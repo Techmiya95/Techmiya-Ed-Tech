@@ -5,93 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Games Portal</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+<style>
+  * {
+    box-sizing: border-box;
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 
-    header {
-      text-align: center;
-      margin-bottom: 20px;
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #f9d342;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .flyer {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    margin-bottom: 40px;
+  }
+
+  .games-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 buttons per row */
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 10px;
+  }
+
+  .games-container a {
+    text-decoration: none;
+  }
+
+  .game-button {
+    width: 100%;
+    background: #f9d342;
+    color: #222;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  .game-button:hover {
+    background: #f4b400;
+    transform: translateY(-5px);
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 1024px) {
+    .games-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .games-container {
+      grid-template-columns: 1fr;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      color: #f9d342;
-    }
-
-    header p {
-      font-size: 1.1rem;
-    }
-
-    .flyer {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      margin-bottom: 40px;
-    }
-
-    .games-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      width: 100%;
-      max-width: 1000px;
-      padding: 10px;
-    }
-
-    .games-container a {
-      text-decoration: none;
+      font-size: 1.8rem;
     }
 
     .game-button {
-      width: 100%;
-      background: #f9d342;
-      color: #222;
-      border: none;
-      border-radius: 12px;
-      padding: 15px 20px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: transform 0.3s ease, background 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      font-size: 1rem;
+      padding: 12px 15px;
     }
+  }
+</style>
 
-    .game-button:hover {
-      background: #f4b400;
-      transform: translateY(-5px);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #ccc;
-      text-align: center;
-    }
-
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .game-button {
-        font-size: 1rem;
-        padding: 12px 15px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -126,7 +140,7 @@
     <a href="sudoku.html">
       <button class="game-button">Sudoku Tournament</button>
     </a>
-    <a href="puzzles.html">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScG7g85Issm5zNNbYoKSDc50mMqUnOmxyeMxCoAA8OcecfZFQ/viewform?usp=sharing">
       <button class="game-button">Puzzles Tournament</button>
     </a>
   </div>
