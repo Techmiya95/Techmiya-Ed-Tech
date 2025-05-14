@@ -154,74 +154,67 @@ blockquote:before{
 	opacity: 0.7;
 }
 
+
 /* --- Buttons --- */
 .main-button {
-	position:relative;
-	display:inline-block;
-	padding:10px 30px;
+	position: relative;
+	display: inline-block;
+	padding: 12px 30px;
 	background-color: #FF6700;
 	border: 2px solid transparent;
 	border-radius: 40px;
 	color: #FFF;
-	-webkit-transition:0.2s all;
-	transition:0.2s all;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.3s all;
+	margin: 10px;
+	text-align: center;
 }
 
-.main-button:hover , .main-button:focus {
-	background-color:#fff;
+.main-button:hover,
+.main-button:focus {
+	background-color: #fff;
 	border: 2px solid #FF6700;
-	color:#FF6700;
-}
-
-.main-button.icon-button:hover , .main-button.icon-button:focus {
-	padding-right: 45px;
-}
-
-.main-button.icon-button:after {
-	content:"\f178";
-	font-family:FontAwesome;
-	position:absolute;
-	width: 30px;
-	right: 15px;
-	text-align:center;
-	opacity:0;
-	-webkit-transition:0.2s all;
-	transition:0.2s all;
-}
-
-.main-button.icon-button:hover:after , .main-button.icon-button:focus:after {
-	opacity:1;
+	color: #FF6700;
 }
 
 .main-button.icon-button {
-  display: inline-block;
-  text-align: center;
-  padding: 12px 24px;
-  background-color: #007bff; /* adjust color as needed */
-  color: #fff;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 10px auto;
-  transition: transform 0.3s ease;
+	padding-right: 45px; /* reserve space for icon */
 }
 
-/* Animation class */
+.main-button.icon-button:after {
+	content: "\f178";
+	font-family: FontAwesome;
+	position: absolute;
+	width: 30px;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	opacity: 0;
+	transition: 0.3s all;
+}
+
+.main-button.icon-button:hover:after,
+.main-button.icon-button:focus:after {
+	opacity: 1;
+}
+
+/* Pop-in Animation */
 .pop-in {
-  animation: popIn 0.5s ease-out;
+	animation: popIn 0.5s ease-out;
 }
 
 @keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+	0% {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
-
 
 /* --  Input  -- */
 input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
