@@ -193,6 +193,36 @@ blockquote:before{
 	opacity:1;
 }
 
+.main-button.icon-button {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 24px;
+  background-color: #007bff; /* adjust color as needed */
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px auto;
+  transition: transform 0.3s ease;
+}
+
+/* Animation class */
+.pop-in {
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
 /* --  Input  -- */
 input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="url"], input[type="tel"], textarea {
     height: 40px;
