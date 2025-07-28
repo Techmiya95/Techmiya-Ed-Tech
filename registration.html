@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration Portal</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background-size: cover;
+      color: white;
+      overflow: auto;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      background-color: transparent;
+      padding: 20px 40px;
+      border-radius: 15px;
+      box-shadow: none;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #f9d342;
+      text-shadow: 0 0 8px #f9d342;
+    }
+
+    .gen-ai-img {
+      max-width: 700px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .gen-ai-img:hover {
+      transform: scale(1.05);
+    }
+
+    .animated-heading {
+      font-size: 2.5rem;
+      color: #f9d342;
+      margin-bottom: 30px;
+      animation: bounce 2s infinite, colorChange 3s infinite alternate;
+      cursor: pointer;
+      user-select: none;
+      text-shadow: 0 0 6px #f9d342;
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: #f9d342;
+        text-shadow: 0 0 6px #f9d342;
+      }
+      50% {
+        color: #ffffff;
+        text-shadow: 0 0 12px #ffffff;
+      }
+      100% {
+        color: #f9d342;
+        text-shadow: 0 0 6px #f9d342;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .registration-link {
+      font-size: 1.4rem;
+      color: #222;
+      text-decoration: none;
+      cursor: pointer;
+      background-color: #f9d342;
+      padding: 15px 40px;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      box-shadow: 0 6px 15px rgba(249, 211, 66, 0.6);
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+      display: inline-block;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .registration-link:hover {
+      background-color: #d4b30a;
+      color: white;
+      box-shadow: 0 8px 20px rgba(212, 179, 10, 0.8);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #ccc;
+      text-align: center;
+      padding: 15px 0;
+      max-width: 700px;
+      width: 100%;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Click here for registration</h1>
+    </header>
+
+    <img class="gen-ai-img" src="./img/Gen_ai.png" alt="Generative AI" />
+
+    <div class="animated-heading">Click Here</div>
+
+    <a class="registration-link" href="https://forms.gle/NLD4jbjnuxnPGzun9" target="_blank" rel="noopener noreferrer">
+      Registration Form Link
+    </a>
+
+    <footer>
+      &copy; 2025 Techmiya Registration Portal. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>

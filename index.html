@@ -19,6 +19,61 @@
 
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+		<style>
+			.animated-highlight {
+				animation: colorChange 1.5s infinite alternate, moveHighlight 1.5s infinite alternate;
+				font-weight: bold;
+				display: inline-block;
+				position: relative;
+			}
+			@keyframes colorChange {
+				0% {
+					color: #e8d175;
+					text-shadow: 0 0 6px #beb281;
+				}
+				15% {
+					color: #ffffff;
+					text-shadow: 0 0 12px #ffffff;
+				}
+				30% {
+					color: #0a4f1a;
+					text-shadow: 0 0 10px #03430f;
+				}
+				50% {
+					color: #ffeb3b;
+					text-shadow: 0 0 10px #ffeb3b;
+				}
+				70% {
+					color: #ffffff;
+					text-shadow: 0 0 12px #ffffff;
+				}
+				85% {
+					color: #ff69b4;
+					text-shadow: 0 0 10px #ff69b4;
+				}
+				100% {
+					color: #f9d342;
+					text-shadow: 0 0 6px #f9d342;
+				}
+			}
+			@keyframes moveHighlight {
+				0% {
+					left: 0;
+				}
+				25% {
+					left: 10px;
+				}
+				50% {
+					left: 0;
+				}
+				75% {
+					left: 10px;
+				}
+				100% {
+					left: 0;
+				}
+			}
+		</style>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -79,9 +134,11 @@
 						<div class="col-md-8">
 							<h1 class="white-text">Techmiya Ed-Tech</h1>
 							<p class="lead white-text">Techmiya Ed-Tech Training Academy.</p>
-							<a class="main-button icon-button" href="https://forms.gle/bnk5WYGSa432GzWY8">Click here to Register for Hackathon Invite</a>
-							<a class="main-button icon-button" href="./discount.html">Register to Avail for Discount</a>
-							<a class="main-button icon-button pop-in" href="./game.html">Register for Techmiya Games</a>
+							<a class="main-button icon-button animated-highlight" href="./registration.html">Click here to Register for Free Webinar</a>
+							<div style="display: flex; gap: 10px;">
+								<a class="main-button icon-button" href="./discount.html">Register to Avail for Discount</a>
+								<a class="main-button icon-button pop-in" href="./game.html">Register for Techmiya Games</a>
+							</div>
 
 						</div>
 					</div>
